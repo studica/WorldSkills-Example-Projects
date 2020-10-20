@@ -7,6 +7,9 @@ import frc.robot.subsystems.Training;
 
 public class Drive extends CommandBase
 {
+    /**
+     * Bring in Subsystem and Gamepad code
+     */
     private static final Training train = RobotContainer.train;
     private static final OI oi = RobotContainer.oi;
 
@@ -45,17 +48,26 @@ public class Drive extends CommandBase
      */
     private static final double DELTA_LIMIT = 0.075;
 
+    /**
+     * Constructor
+     */
     public Drive()
     {
-        addRequirements(train);
+        addRequirements(train); //add the traning subsystem as a requirement 
     }
 
+    /**
+     * Code here will run once when the command is called for the first time
+     */
     @Override
     public void initialize()
     {
 
     }
 
+    /**
+     * Code here will run continously every robot loop until the command is stopped
+     */
     @Override
     public void execute()
     {
@@ -101,12 +113,20 @@ public class Drive extends CommandBase
         train.setMotorSpeed(inputRightY);
     }
 
+    /**
+     * When the comamnd is stopped or interrupted this code is run
+     * <p>
+     * Good place to stop motors in case of an error
+     */
     @Override
     public void end(boolean interrupted)
     {
         train.setMotorSpeed(0);
     }
 
+    /**
+     * Check to see if command is finished
+     */
     @Override
     public boolean isFinished()
     {

@@ -1,13 +1,16 @@
 package frc.robot.gamepad;
 
+//Import the joystick class
 import edu.wpi.first.wpilibj.Joystick;
 
 public class OI
 {
+    //Create the joystick
     Joystick drivePad;
 
     public OI()
     {
+        //initialize the joystick 
         drivePad = new Joystick(GamepadConstants.DRIVE_USB_PORT);
     }
 

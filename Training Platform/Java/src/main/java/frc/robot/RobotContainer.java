@@ -13,13 +13,19 @@ import frc.robot.commands.Drive;
 
 public class RobotContainer {
 
+  /**
+   * Create the subsystems and gamepad objects
+   */
   public static Training train;
   public static OI oi;
 
   public RobotContainer()
   {
+      //Create new instances
       train = new Training();
       oi = new OI();
+      
+      //Set the default command for the training subsytem
       train.setDefaultCommand(new Drive());
   }
 }
