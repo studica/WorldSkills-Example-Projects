@@ -1,0 +1,64 @@
+{
+    "fileName": "Studica.json",
+    "name": "Studica",
+    "version": "0.0.157",
+    "uuid": "e7331fe2-cfaf-4728-878f-03e918da42c5",
+    "mavenUrls": [
+        "http://dev.studica.com/maven/release/"
+    ],
+    "jsonUrl": "http://dev.studica.com/releases/2020/Studica.json",
+    "cppDependencies": [
+        {
+            "artifactId": "Titan-cpp",
+            "binaryPlatforms": [
+                "windowsx86-64",
+                "windowsx86",
+                "linuxathena",
+                "linuxraspbian"
+            ],
+            "groupId": "com.studica.frc",
+            "headerClassifier": "headers",
+            "libName": "Titan",
+            "sharedLibrary": false,
+            "skipInvalidPlatforms": true,
+            "version": "0.0.157"
+        },
+        {
+            "artifactId": "Titan-driver",
+            "binaryPlatforms": [
+                "windowsx86-64",
+                "windowsx86",
+                "linuxathena",
+                "linuxraspbian"
+            ],
+            "groupId": "com.studica.frc",
+            "headerClassifier": "headers",
+            "libName": "TitanDriver",
+            "sharedLibrary": false,
+            "skipInvalidPlatforms": true,
+            "version": "0.0.157"
+        }
+    ],
+    "javaDependencies": [
+        {
+            "artifactId": "Titan-java",
+            "groupId": "com.studica.frc",
+            "version": "0.0.157"
+        }
+    ],
+    "jniDependencies": [
+        {
+            "artifactId": "Titan-driver",
+            "groupId": "com.studica.frc",
+            "isJar": false,
+            "skipInvalidPlatforms": true,
+            "validPlatforms": [
+                "windowsx86-64",
+                "windowsx86",
+                "linuxathena",
+                "linuxraspbian"
+            ],
+            "version": "0.0.157"
+        }
+    ]
+}
