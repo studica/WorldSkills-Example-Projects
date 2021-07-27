@@ -1,7 +1,7 @@
 {
     "fileName": "Studica.json",
     "name": "Studica",
-    "version": "0.0.157",
+    "version": "1.0.0",
     "uuid": "e7331fe2-cfaf-4728-878f-03e918da42c5",
     "mavenUrls": [
         "http://dev.studica.com/maven/release/"
@@ -21,7 +21,7 @@
             "libName": "Titan",
             "sharedLibrary": false,
             "skipInvalidPlatforms": true,
-            "version": "0.0.157"
+            "version": "1.0.0"
         },
         {
             "artifactId": "Titan-driver",
@@ -36,14 +36,14 @@
             "libName": "TitanDriver",
             "sharedLibrary": false,
             "skipInvalidPlatforms": true,
-            "version": "0.0.157"
+            "version": "1.0.0"
         }
     ],
     "javaDependencies": [
         {
             "artifactId": "Titan-java",
             "groupId": "com.studica.frc",
-            "version": "0.0.157"
+            "version": "1.0.0"
         }
     ],
     "jniDependencies": [
@@ -58,7 +58,7 @@
                 "linuxathena",
                 "linuxraspbian"
             ],
-            "version": "0.0.157"
+            "version": "1.0.0"
         }
     ]
 }
