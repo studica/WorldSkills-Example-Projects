@@ -1,0 +1,64 @@
+{
+    "fileName": "Orbbec.json",
+    "name": "Orbbec",
+    "version": "1.9.5",
+    "uuid": "492799c7-49cd-4d33-bbd0-ea736ebdbb75",
+    "mavenUrls": [
+        "http://dev.studica.com/maven/release/dev/"
+    ],
+    "jsonUrl": "https://dev.studica.com/releases/2020/Orbbec.json",
+    "cppDependencies": [
+        {
+            "artifactId": "OrbbecSdkFrc-cpp",
+            "binaryPlatforms": [
+                "windowsx86-64",
+                "windowsx86",
+                "linuxathena",
+                "linuxraspbian"
+            ],
+            "groupId": "com.orbbec.frc",
+            "headerClassifier": "headers",
+            "libName": "Orbbec",
+            "sharedLibrary": false,
+            "skipInvalidPlatforms": true,
+            "version": "1.9.5"
+        },
+        {
+            "artifactId": "OrbbecSdkFrc-driver",
+            "binaryPlatforms": [
+                "windowsx86-64",
+                "windowsx86",
+                "linuxathena",
+                "linuxraspbian"
+            ],
+            "groupId": "com.orbbec.frc",
+            "headerClassifier": "headers",
+            "libName": "OrbbecDriver",
+            "sharedLibrary": false,
+            "skipInvalidPlatforms": true,
+            "version": "1.9.5"
+        }
+    ],
+    "javaDependencies": [
+        {
+            "artifactId": "OrbbecSdkFrc-java",
+            "groupId": "com.orbbec.frc",
+            "version": "1.9.5"
+        }
+    ],
+    "jniDependencies": [
+        {
+            "artifactId": "OrbbecSdkFrc-driver",
+            "groupId": "com.orbbec.frc",
+            "isJar": false,
+            "skipInvalidPlatforms": true,
+            "validPlatforms": [
+                "windowsx86-64",
+                "windowsx86",
+                "linuxathena",
+                "linuxraspbian"
+            ],
+            "version": "1.9.5"
+        }
+    ]
+}
