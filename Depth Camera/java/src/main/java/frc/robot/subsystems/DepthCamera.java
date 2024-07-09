@@ -328,6 +328,51 @@ public class DepthCamera extends SubsystemBase
     }
 
     /**
+     * Process the Depth Frame and printout the XYZ at a specified point.
+     * 
+     * @param frame DepthFrame
+     */
+    private void processDepthFrame(DepthFrame frame)
+    {
+        // Get Height and Width of Frame
+        int height = frame.getHeight();
+        int width = frame.getWidth();
+
+        // Specific Pixel we are checking
+        int x = 355;
+        int y = 205;
+
+        // FOV of camera in Depth mode
+        double fov_w = 79.0;
+        double fov_h = 62.0;
+
+        // Get the data from the depth frame
+        byte[] frameData = new byte[frame.getDataSize()];
+        frame.getData(frameData);
+
+        // Process the data
+        // Depth data is 16 bit, java uses 8 bit bytes so two bytes needed for full depth data
+        int depthD1 = frameData[x * width + y]; 
+        int depthD2 = frameData[x * width + y + 1];
+
+        // When adding the first byte is the MSB and masking is required
+        double pZ = ((depthD1 << 8) & 0xFF00) + (depthD2 & 0xFF);
+
+        // Calculate Theta W and H
+        double theta_w = (fov_w / (double)width) * (x - (width/2.0));
+        double theta_h = (fov_h / (double)height) * (y - (height/2.0));
+
+        // Calculate X and Y distance in 3d notation
+        double pX= pZ * Math.tan(Math.toRadians(theta_w));
+        double pY = pZ * Math.tan(Math.toRadians(theta_h));
+
+        // Build demo string to display data on a dashboard
+        StringBuilder sb = new StringBuilder()
+        .append("x: " + Math.round(pX) + "mm, y: " + Math.round(pY) + "mm, z: " + pZ+ "mm");
+        SmartDashboard.putString("Data: ", sb.toString());
+    }
+
+    /**
      * Process the frame set
      * 
      * @param frameSet new frame set
@@ -354,6 +399,7 @@ public class DepthCamera extends SubsystemBase
             {
                 // print the depth frame's information.
                 printVideoFrame(depthFrame, SensorType.DEPTH);
+                processDepthFrame(depthFrame);
             }
         } 
         catch(Exception e) 

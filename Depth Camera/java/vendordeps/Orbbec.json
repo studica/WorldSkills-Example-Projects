@@ -1,10 +1,10 @@
 {
     "fileName": "Orbbec.json",
     "name": "Orbbec",
-    "version": "1.9.5",
+    "version": "1.10.9",
     "uuid": "492799c7-49cd-4d33-bbd0-ea736ebdbb75",
     "mavenUrls": [
-        "http://dev.studica.com/maven/release/dev/"
+        "http://dev.studica.com/maven/release/"
     ],
     "jsonUrl": "https://dev.studica.com/releases/2020/Orbbec.json",
     "cppDependencies": [
@@ -21,7 +21,7 @@
             "libName": "Orbbec",
             "sharedLibrary": false,
             "skipInvalidPlatforms": true,
-            "version": "1.9.5"
+            "version": "1.10.9"
         },
         {
             "artifactId": "OrbbecSdkFrc-driver",
@@ -36,14 +36,14 @@
             "libName": "OrbbecDriver",
             "sharedLibrary": false,
             "skipInvalidPlatforms": true,
-            "version": "1.9.5"
+            "version": "1.10.9"
         }
     ],
     "javaDependencies": [
         {
             "artifactId": "OrbbecSdkFrc-java",
             "groupId": "com.orbbec.frc",
-            "version": "1.9.5"
+            "version": "1.10.9"
         }
     ],
     "jniDependencies": [
@@ -58,7 +58,7 @@
                 "linuxathena",
                 "linuxraspbian"
             ],
-            "version": "1.9.5"
+            "version": "1.10.9"
         }
     ]
 }
