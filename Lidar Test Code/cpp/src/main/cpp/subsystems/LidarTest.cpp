@@ -14,6 +14,14 @@ void LidarTest::StartLidar()
 {
     lidar.Start();
     lidarRunning = true;
+    // Configure filter
+    lidar.ClusterConfig(50.0f, 5);
+    // lidar.KalmanConfig(1e-5f, 1e-1f, 1.0f);
+    // lidar.MovingAverageConfig(5);
+    // lidar.MedianConfig(5);
+    // lidar.JitterConfig(50.0f);
+    // enable filter
+    lidar.EnableFilter(studica::Lidar::Filter::kCLUSTER, true);
 }
 
 /**

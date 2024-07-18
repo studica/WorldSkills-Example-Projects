@@ -22,6 +22,16 @@ public class LidarTest extends SubsystemBase
          * Bottom USB 2.0 port of VMX = kUSB2
          */
         lidar = new Lidar(Lidar.Port.kUSB1); //Lidar will start spinning the moment this is called
+
+        // Configure filters
+        lidar.clusterConfig(50.0f, 5);
+        // lidar.kalmanConfig(1e-5f, 1e-1f, 1.0f);
+        // lidar.movingAverageConfig(5);
+        // lidar.medianConfig(5);
+        // lidar.jitterConfig(50.0f);
+
+        // Enable Filter
+        lidar.enableFilter(Lidar.Filter.kCLUSTER, true);
     }
 
     /**

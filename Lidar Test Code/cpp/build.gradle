@@ -1,7 +1,7 @@
 plugins {
     id "cpp"
     id "google-test-test-suite"
-    id "com.kauailabs.first.GradleRIO" version "2020.3.2.29"
+    id "com.kauailabs.first.GradleRIO" version "2020.3.2.30"
 }
 
 // Define my targets (RoboRIO) and artifacts (deployable files)

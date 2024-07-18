@@ -1,15 +1,15 @@
 {
     "fileName": "Studica.json",
     "name": "Studica",
-    "version": "1.0.0",
+    "version": "1.1.27",
     "uuid": "e7331fe2-cfaf-4728-878f-03e918da42c5",
     "mavenUrls": [
-        "http://dev.studica.com/maven/release/"
+        "https://dev.studica.com/maven/release/"
     ],
-    "jsonUrl": "http://dev.studica.com/releases/2020/Studica.json",
+    "jsonUrl": "https://dev.studica.com/releases/2020/Studica.json",
     "cppDependencies": [
         {
-            "artifactId": "Titan-cpp",
+            "artifactId": "Studica-cpp",
             "binaryPlatforms": [
                 "windowsx86-64",
                 "windowsx86",
@@ -18,13 +18,13 @@
             ],
             "groupId": "com.studica.frc",
             "headerClassifier": "headers",
-            "libName": "Titan",
+            "libName": "Studica",
             "sharedLibrary": false,
             "skipInvalidPlatforms": true,
-            "version": "1.0.0"
+            "version": "1.1.27"
         },
         {
-            "artifactId": "Titan-driver",
+            "artifactId": "Studica-driver",
             "binaryPlatforms": [
                 "windowsx86-64",
                 "windowsx86",
@@ -33,22 +33,22 @@
             ],
             "groupId": "com.studica.frc",
             "headerClassifier": "headers",
-            "libName": "TitanDriver",
+            "libName": "StudicaDriver",
             "sharedLibrary": false,
             "skipInvalidPlatforms": true,
-            "version": "1.0.0"
+            "version": "1.1.27"
         }
     ],
     "javaDependencies": [
         {
-            "artifactId": "Titan-java",
+            "artifactId": "Studica-java",
             "groupId": "com.studica.frc",
-            "version": "1.0.0"
+            "version": "1.1.27"
         }
     ],
     "jniDependencies": [
         {
-            "artifactId": "Titan-driver",
+            "artifactId": "Studica-driver",
             "groupId": "com.studica.frc",
             "isJar": false,
             "skipInvalidPlatforms": true,
@@ -58,7 +58,7 @@
                 "linuxathena",
                 "linuxraspbian"
             ],
-            "version": "1.0.0"
+            "version": "1.1.27"
         }
     ]
 }

@@ -1,6 +1,6 @@
 plugins {
     id "java"
-    id "com.kauailabs.first.GradleRIO" version "2020.3.2.10"
+    id "com.kauailabs.first.GradleRIO" version "2020.3.2.30"
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
