@@ -4,7 +4,7 @@
     "version": "1.10.9",
     "uuid": "492799c7-49cd-4d33-bbd0-ea736ebdbb75",
     "mavenUrls": [
-        "http://dev.studica.com/maven/release/"
+        "https://dev.studica.com/maven/release/"
     ],
     "jsonUrl": "https://dev.studica.com/releases/2020/Orbbec.json",
     "cppDependencies": [

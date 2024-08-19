@@ -335,12 +335,12 @@ public class DepthCamera extends SubsystemBase
     private void processDepthFrame(DepthFrame frame)
     {
         // Get Height and Width of Frame
-        int height = frame.getHeight();
-        int width = frame.getWidth();
+        int height = frame.getWidth(); // These are swapped in api
+        int width = frame.getHeight();
 
         // Specific Pixel we are checking
-        int x = 355;
-        int y = 205;
+        int x = width / 2; // Center of the camera
+        int y = height / 2; // Center of the camera
 
         // FOV of camera in Depth mode
         double fov_w = 79.0;
@@ -352,11 +352,11 @@ public class DepthCamera extends SubsystemBase
 
         // Process the data
         // Depth data is 16 bit, java uses 8 bit bytes so two bytes needed for full depth data
-        int depthD1 = frameData[x * width + y]; 
-        int depthD2 = frameData[x * width + y + 1];
+        int depthD1 = frameData[y * width + x]; 
+        int depthD2 = frameData[y * width + x + 1];
 
-        // When adding the first byte is the MSB and masking is required
-        double pZ = ((depthD1 << 8) & 0xFF00) + (depthD2 & 0xFF);
+        // When adding the first byte is the LSB and masking is required
+        double pZ = ((depthD2 << 8) & 0xFF00) + (depthD1 & 0xFF);
 
         // Calculate Theta W and H
         double theta_w = (fov_w / (double)width) * (x - (width/2.0));
